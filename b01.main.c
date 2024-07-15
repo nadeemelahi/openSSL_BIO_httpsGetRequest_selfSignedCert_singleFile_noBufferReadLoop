@@ -37,6 +37,7 @@
 
 # include <stdio.h>
 # include <stdlib.h>
+# include <string.h>
 
 # include  "openssl/bio.h"
 # include  "openssl/ssl.h"
