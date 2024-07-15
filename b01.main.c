@@ -119,7 +119,13 @@ int main ( int argc , char * argv [ ] ) {
 	// does not work on debian bookworm
 
 		
-	BIO_set_conn_hostname ( bio , "3deem.com:443" ) ;
+
+	char hostNportBuf[200] = {0};
+	char *hostNport = hostNportBuf;
+
+	sprintf( hostNport , "%s:443" , argv[1] ) ;
+		
+	BIO_set_conn_hostname ( bio , hostNport ) ;
 	printf("BIO_set_conn_hostname() CHECK\n");
 
 
